@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBridge | Mental Health Platform</title>
+    <meta name="description" content="MindBridge - Mental Health Screening & Support Platform in Pakistan">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Informed Consent Modal -->
+    <div id="consent-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Welcome to MindBridge</h2>
+            <p><strong>Please read carefully:</strong></p>
+            <p>MindBridge provides automated mental health screening analytics. <em>This is not a clinical diagnostic tool.</em></p>
+            <p>Your data is completely anonymous and is processed instantly on your device without being stored on any server.</p>
+            <p>If you are in immediate distress, please call the Umang Helpline: <strong>0311-7786264</strong></p>
+            <button id="consent-btn" class="btn btn-primary" style="margin-top: 1rem;">I Understand</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">MindBridge</a>
+        <button id="hamburger-menu" class="hamburger">&#9776;</button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="screening.html">Screening</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Your Mental Health Matters.</h1>
+                <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem auto;">Free, confidential, and evidence-based mental health screening for everyone in Pakistan.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="screening.html" class="btn btn-primary">Take a Screening</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Component -->
+        <section class="bg-cream-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="video-container">
+                    <!-- Project background video file -->
+                    <video controls loop muted autoplay>
+                        <source src="project-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p style="text-align: center; font-style: italic; color: var(--text-dark); opacity: 0.8;">
+                    Exploring the intersection of digital accessibility and mental wellness.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="bg-cream-section">
+            <div class="container">
+                <h2 style="text-align: center; color: var(--primary); margin-bottom: 3rem; font-size: 2.5rem;">What MindBridge Offers</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 style="color: var(--primary); font-size: 1.5rem;">Screen</h3>
+                        <p>Complete validated questionnaires used by psychologists worldwide.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: var(--primary); font-size: 1.5rem;">Understand</h3>
+                        <p>Get instant results with clear explanations and guidance.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: var(--primary); font-size: 1.5rem;">Connect</h3>
+                        <p>Access support resources and connect with professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="bg-mint-section">
+            <div class="container">
+                <h2 style="text-align: center; color: var(--primary); margin-bottom: 3rem; font-size: 2.5rem;">How It Works</h2>
+                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="step-item">
+                        <div class="step-circle">1</div>
+                        <p style="font-weight: bold;">Choose a screening tool</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">2</div>
+                        <p style="font-weight: bold;">Answer questions honestly</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">3</div>
+                        <p style="font-weight: bold;">Receive score & recommendations</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">4</div>
+                        <p style="font-weight: bold;">Get support from our AI chatbot</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <strong>MindBridge &copy; 2026 &mdash; Mental Health Screening & Support Platform</strong>
+            </div>
+            <div style="font-weight: 500; color: #FFF; background: var(--red); padding: 0.5rem 1rem; border-radius: 4px;">
+                Crisis Helplines: Umang 0311-7786264 | Rozan 051-2890505
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            This is a screening tool, not a diagnostic assessment.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

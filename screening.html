@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screening | MindBridge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">MindBridge</a>
+        <button id="hamburger-menu" class="hamburger">&#9776;</button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="screening.html" class="active">Screening</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="bg-cream-section">
+            <div class="container">
+                <h1 style="color: var(--primary); text-align: center; margin-bottom: 3rem;">Mental Health Screenings</h1>
+                
+                <!-- Cards Selection -->
+                <div id="screening-cards" class="grid-3">
+                    <div class="card" style="text-align: center;">
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Depression Screening</h3>
+                        <p style="margin-bottom: 1.5rem;">Patient Health Questionnaire (PHQ-9) | 9 questions</p>
+                        <button class="btn btn-primary screening-select-btn" data-form="phq9-form">Start PHQ-9</button>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Anxiety Screening</h3>
+                        <p style="margin-bottom: 1.5rem;">Generalized Anxiety Disorder (GAD-7) | 7 questions</p>
+                        <button class="btn btn-primary screening-select-btn" data-form="gad7-form">Start GAD-7</button>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Stress Screening</h3>
+                        <p style="margin-bottom: 1.5rem;">Perceived Stress Scale (PSS-10) | 10 questions</p>
+                        <button class="btn btn-primary screening-select-btn" data-form="pss10-form">Start PSS-10</button>
+                    </div>
+                </div>
+
+                <!-- Forms Container -->
+                <div id="form-container" style="display: none;">
+                    <button id="back-to-screening" class="btn btn-secondary" style="margin-bottom: 2rem;">&larr; Back to Screening Options</button>
+                    
+                    <!-- PHQ-9 -->
+                    <form id="phq9-form" class="assessment-form">
+                        <h2 style="color: var(--primary);">Patient Health Questionnaire (PHQ-9)</h2>
+                        <p style="margin-bottom: 2rem;">Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+                        
+                        <div class="question-box"><p>1. Little interest or pleasure in doing things</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq91" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq91" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq91" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq91" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>2. Feeling down, depressed, or hopeless</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq92" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq92" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq92" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq92" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>3. Trouble falling or staying asleep, or sleeping too much</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq93" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq93" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq93" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq93" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>4. Feeling tired or having little energy</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq94" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq94" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq94" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq94" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>5. Poor appetite or overeating</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq95" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq95" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq95" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq95" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq96" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq96" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq96" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq96" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>7. Trouble concentrating on things, such as reading the newspaper or watching television</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq97" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq97" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq97" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq97" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>8. Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq98" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq98" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq98" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq98" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>9. Thoughts that you would be better off dead, or of hurting yourself</p><div class="radio-group"><label class="radio-option"><input type="radio" name="phq99" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="phq99" value="1"> Several days</label><label class="radio-option"><input type="radio" name="phq99" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="phq99" value="3"> Nearly every day</label></div></div>
+
+                        <button type="submit" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">Get Results</button>
+                    </form>
+
+                    <!-- GAD-7 -->
+                    <form id="gad7-form" class="assessment-form" style="display: none;">
+                        <h2 style="color: var(--primary);">Generalized Anxiety Disorder (GAD-7)</h2>
+                        <p style="margin-bottom: 2rem;">Over the last 2 weeks, how often have you been bothered by the following problems?</p>
+                        
+                        <div class="question-box"><p>1. Feeling nervous, anxious, or on edge</p><div class="radio-group"><label class="radio-option"><input type="radio" name="gad71" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="gad71" value="1"> Several days</label><label class="radio-option"><input type="radio" name="gad71" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="gad71" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>2. Not being able to stop or control worrying</p><div class="radio-group"><label class="radio-option"><input type="radio" name="gad72" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="gad72" value="1"> Several days</label><label class="radio-option"><input type="radio" name="gad72" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="gad72" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>3. Worrying too much about different things</p><div class="radio-group"><label class="radio-option"><input type="radio" name="gad73" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="gad73" value="1"> Several days</label><label class="radio-option"><input type="radio" name="gad73" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="gad73" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>4. Trouble relaxing</p><div class="radio-group"><label class="radio-option"><input type="radio" name="gad74" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="gad74" value="1"> Several days</label><label class="radio-option"><input type="radio" name="gad74" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="gad74" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>5. Being so restless that it is hard to sit still</p><div class="radio-group"><label class="radio-option"><input type="radio" name="gad75" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="gad75" value="1"> Several days</label><label class="radio-option"><input type="radio" name="gad75" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="gad75" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>6. Becoming easily annoyed or irritable</p><div class="radio-group"><label class="radio-option"><input type="radio" name="gad76" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="gad76" value="1"> Several days</label><label class="radio-option"><input type="radio" name="gad76" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="gad76" value="3"> Nearly every day</label></div></div>
+                        <div class="question-box"><p>7. Feeling afraid, as if something awful might happen</p><div class="radio-group"><label class="radio-option"><input type="radio" name="gad77" value="0"> Not at all</label><label class="radio-option"><input type="radio" name="gad77" value="1"> Several days</label><label class="radio-option"><input type="radio" name="gad77" value="2"> More than half the days</label><label class="radio-option"><input type="radio" name="gad77" value="3"> Nearly every day</label></div></div>
+
+                        <button type="submit" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">Get Results</button>
+                    </form>
+
+                    <!-- PSS-10 -->
+                    <form id="pss10-form" class="assessment-form" style="display: none;">
+                        <h2 style="color: var(--primary);">Perceived Stress Scale (PSS-10)</h2>
+                        <p style="margin-bottom: 2rem;">In the last month, how often have you experienced the following?</p>
+                        
+                        <div class="question-box"><p>1. Been upset because of something that happened unexpectedly?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss101" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss101" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss101" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss101" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss101" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>2. Felt that you were unable to control the important things in your life?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss102" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss102" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss102" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss102" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss102" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>3. Felt nervous and "stressed"?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss103" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss103" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss103" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss103" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss103" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>4. Felt confident about your ability to handle your personal problems?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss104" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss104" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss104" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss104" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss104" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>5. Felt that things were going your way?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss105" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss105" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss105" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss105" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss105" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>6. Found that you could not cope with all the things that you had to do?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss106" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss106" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss106" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss106" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss106" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>7. Been able to control irritations in your life?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss107" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss107" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss107" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss107" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss107" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>8. Felt that you were on top of things?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss108" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss108" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss108" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss108" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss108" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>9. Been angered because of things that were outside of your control?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss109" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss109" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss109" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss109" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss109" value="4"> Very Often</label></div></div>
+                        <div class="question-box"><p>10. Felt difficulties were piling up so high that you could not overcome them?</p><div class="radio-group"><label class="radio-option"><input type="radio" name="pss1010" value="0"> Never</label><label class="radio-option"><input type="radio" name="pss1010" value="1"> Almost Never</label><label class="radio-option"><input type="radio" name="pss1010" value="2"> Sometimes</label><label class="radio-option"><input type="radio" name="pss1010" value="3"> Fairly Often</label><label class="radio-option"><input type="radio" name="pss1010" value="4"> Very Often</label></div></div>
+
+                        <button type="submit" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">Get Results</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <strong>MindBridge &copy; 2026 &mdash; Mental Health Screening & Support Platform</strong>
+            </div>
+            <div style="font-weight: 500; color: #FFF; background: var(--red); padding: 0.5rem 1rem; border-radius: 4px;">
+                Crisis Helplines: Umang 0311-7786264 | Rozan 051-2890505
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            This is a screening tool, not a diagnostic assessment.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

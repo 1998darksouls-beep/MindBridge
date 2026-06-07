@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | MindBridge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">MindBridge</a>
+        <button id="hamburger-menu" class="hamburger">&#9776;</button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="screening.html">Screening</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="bg-cream-section">
+            <div class="container">
+                <h1 style="color: var(--primary); text-align: center; margin-bottom: 3rem;">Get in Touch</h1>
+                
+                <div class="grid-2">
+                    <!-- Left: Contact Form -->
+                    <div class="card" style="border-top-color: var(--primary);">
+                        <h2 style="color: var(--primary);">Contact Intake</h2>
+                        <form id="contact-intake-form">
+                            <div style="margin-bottom: 1rem;">
+                                <label for="name" style="font-weight: 600;">Name</label>
+                                <input type="text" id="name" class="form-control" required placeholder="Your full name">
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label for="email" style="font-weight: 600;">Email</label>
+                                <input type="email" id="email" class="form-control" required placeholder="Your email address">
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label for="subject" style="font-weight: 600;">Subject</label>
+                                <select id="subject" class="form-control" required>
+                                    <option value="" disabled selected>Select a subject...</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Screening Help">Screening Help</option>
+                                    <option value="Booking Question">Booking Question</option>
+                                    <option value="Technical Issue">Technical Issue</option>
+                                    <option value="Feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="message" style="font-weight: 600;">Message</label>
+                                <textarea id="message" class="form-control" rows="5" required placeholder="How can we assist you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Info Cards -->
+                    <div>
+                        <div class="card" style="margin-bottom: 1.5rem; border-top-color: var(--secondary);">
+                            <h3 style="color: var(--secondary);">Email Support</h3>
+                            <p style="font-size: 1.1rem; font-weight: 500;">support@mindbridge.pk</p>
+                            <p style="opacity: 0.8;">We typically reply within 24 hours.</p>
+                        </div>
+                        
+                        <div class="card" style="margin-bottom: 1.5rem; border-top-color: var(--green);">
+                            <h3 style="color: var(--green);">WhatsApp Chat</h3>
+                            <p>Connect with our administrative team for booking questions.</p>
+                            <a href="#" class="btn" style="background-color: var(--green); color: white; display: inline-block; margin-top: 1rem;" onclick="alert('Opening WhatsApp link...'); return false;">Message Us</a>
+                        </div>
+                        
+                        <div class="card" style="border-top-color: var(--red); background: #FFF5F5;">
+                            <h3 style="color: var(--red);">Urgent Helplines</h3>
+                            <p style="font-weight: bold;">Available 24/7 in Pakistan:</p>
+                            <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                                <li>📞 Umang: <a href="tel:03117786264" style="color: var(--red); font-weight: bold;">0311-7786264</a></li>
+                                <li>📞 Rozan: <a href="tel:0512890505" style="color: var(--red); font-weight: bold;">051-2890505</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <strong>MindBridge &copy; 2026 &mdash; Mental Health Screening & Support Platform</strong>
+            </div>
+            <div style="font-weight: 500; color: #FFF; background: var(--red); padding: 0.5rem 1rem; border-radius: 4px;">
+                Crisis Helplines: Umang 0311-7786264 | Rozan 051-2890505
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            This is a screening tool, not a diagnostic assessment.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

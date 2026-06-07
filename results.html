@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | MindBridge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">MindBridge</a>
+        <button id="hamburger-menu" class="hamburger">&#9776;</button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="screening.html">Screening</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Crisis Protocol Injection Banner -->
+        <div id="crisis-banner" class="crisis-banner">
+            WARNING: Your results indicate immediate risk. Please contact emergency services or call Umang Helpline at <a href="tel:03117786264">0311-7786264</a> or Rozan at <a href="tel:0512890505">051-2890505</a> immediately.
+        </div>
+
+        <section class="bg-cream-section">
+            <div class="container" style="text-align: center;">
+                <h1 id="result-test-name" style="color: var(--primary);">Assessment Results</h1>
+                
+                <div id="score-circle" class="score-circle tier-minimal">
+                    <span>--</span> / --
+                </div>
+
+                <p id="severity-subtext" style="font-size: 1.25rem; font-weight: 500; margin-bottom: 3rem; max-width: 600px; margin-inline: auto;">
+                    Evaluating your responses...
+                </p>
+
+                <!-- Dynamic Resource Tiers -->
+                <div id="tier1-resources" class="grid-2" style="display: none; text-align: left; margin-top: 2rem;">
+                    <div class="card" style="border-top-color: var(--secondary);">
+                        <h3 style="color: var(--secondary);">4-7-8 Breathing</h3>
+                        <p>Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds. This helps regulate the nervous system.</p>
+                    </div>
+                    <div class="card" style="border-top-color: var(--secondary);">
+                        <h3 style="color: var(--secondary);">Sleep Hygiene</h3>
+                        <p>Ensure 7-9 hours of consistent sleep. Reduce screen time before bed for better quality rest.</p>
+                    </div>
+                    <div class="card" style="border-top-color: var(--secondary);">
+                        <h3 style="color: var(--secondary);">Mindfulness</h3>
+                        <p>Practice 5 minutes of mindful meditation daily to ground your thoughts and reduce stress.</p>
+                    </div>
+                    <div class="card" style="border-top-color: var(--secondary);">
+                        <h3 style="color: var(--secondary);">Journaling</h3>
+                        <p>Write down your thoughts to process emotions and identify triggers.</p>
+                    </div>
+                </div>
+
+                <div id="tier2-resources" style="display: none; margin-top: 3rem;">
+                    <div class="card" style="border: 2px solid var(--primary); background: white;">
+                        <h2 style="color: var(--primary);">Consider Professional Support</h2>
+                        <p style="margin-bottom: 1.5rem;">Speaking with a therapist or counselor can provide you with personalized coping strategies and a safe space to explore your feelings.</p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="#" class="btn btn-primary" onclick="alert('Redirecting to Booking Platform...'); return false;">Book a Session</a>
+                            <a href="#" class="btn" style="background-color: var(--green); color: white;" onclick="alert('Opening WhatsApp...'); return false;">Message on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tier3-resources" style="display: none; margin-top: 3rem;">
+                    <div class="card" style="border: 2px solid var(--red); background: #FFF5F5;">
+                        <h2 style="color: var(--red);">Urgent Support Protocol</h2>
+                        <p style="margin-bottom: 1.5rem; font-weight: bold; color: var(--red);">We strongly recommend reaching out to a professional immediately. Help is available 24/7.</p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:03117786264" class="btn btn-primary" style="background-color: var(--red);">Call Umang Helpline</a>
+                            <a href="tel:0512890505" class="btn btn-primary" style="background-color: var(--red);">Call Rozan Helpline</a>
+                            <a href="#" class="btn btn-secondary" style="border-color: var(--red); color: var(--red);">Urgent Booking</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <strong>MindBridge &copy; 2026 &mdash; Mental Health Screening & Support Platform</strong>
+            </div>
+            <div style="font-weight: 500; color: #FFF; background: var(--red); padding: 0.5rem 1rem; border-radius: 4px;">
+                Crisis Helplines: Umang 0311-7786264 | Rozan 051-2890505
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            This is a screening tool, not a diagnostic assessment.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
