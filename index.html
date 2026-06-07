@@ -34,31 +34,24 @@
     </nav>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1>Your Mental Health Matters.</h1>
-                <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem auto;">Free, confidential, and evidence-based mental health screening for everyone in Pakistan.</p>
+        <!-- Hero Section with Background Video -->
+        <section class="hero" style="position: relative; padding: 6rem 2rem; overflow: hidden; background: transparent;">
+            <!-- Native HTML5 Video Background -->
+            <video src="project-video.mp4" 
+                   autoplay loop muted playsinline
+                   style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 0; object-fit: cover; pointer-events: none;">
+            </video>
+            
+            <!-- Dark Overlay -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <h1 style="color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Your Mental Health Matters.</h1>
+                <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem auto; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Free, confidential, and evidence-based mental health screening for everyone in Pakistan.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="screening.html" class="btn btn-primary">Take a Screening</a>
-                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                    <a href="about.html" class="btn btn-secondary" style="color: white; border-color: white; background: rgba(255,255,255,0.1);">Learn More</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Video Component -->
-        <section class="bg-cream-section" style="padding-top: 0;">
-            <div class="container">
-                <div class="video-container">
-                    <!-- Project background video file -->
-                    <video controls loop muted autoplay>
-                        <source src="project-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p style="text-align: center; font-style: italic; color: var(--text-dark); opacity: 0.8;">
-                    Exploring the intersection of digital accessibility and mental wellness.
-                </p>
             </div>
         </section>
 
