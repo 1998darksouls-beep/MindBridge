@@ -30,16 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const screeningCards = document.getElementById('screening-cards');
     const formContainer = document.getElementById('form-container');
     const backBtn = document.getElementById('back-to-screening');
-    
+
     if (screeningCards && formContainer) {
         document.querySelectorAll('.screening-select-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const formId = e.target.getAttribute('data-form');
-                
+
                 // Hide cards, show container
                 screeningCards.style.display = 'none';
                 formContainer.style.display = 'block';
-                
+
                 // Hide all forms, show selected
                 document.querySelectorAll('.assessment-form').forEach(f => f.style.display = 'none');
                 document.getElementById(formId).style.display = 'block';
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 1; i <= numQuestions; i++) {
                 const name = `${instrument.toLowerCase()}${i}`;
                 const selected = document.querySelector(`input[name="${name}"]:checked`);
-                
+
                 if (selected) {
                     let val = parseInt(selected.value, 10);
                     // Critical: PSS-10 reverse scoring for 4, 5, 7, 8
@@ -122,10 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (test && !isNaN(score)) {
             document.getElementById('result-test-name').textContent = `${test} Results`;
-            
+
             const scoreCircle = document.getElementById('score-circle');
             scoreCircle.innerHTML = `<span>${score}</span> / ${test === 'PSS10' ? '40' : (test === 'PHQ9' ? '27' : '21')}`;
-            
+
             const subtext = document.getElementById('severity-subtext');
             const tier1 = document.getElementById('tier1-resources');
             const tier2 = document.getElementById('tier2-resources');
@@ -185,3 +185,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+function submitWebsiteScreening() {
+    let name = document.getElementById("userName").value;
+    let email = document.getElementById("userEmail").value;
+    let phone = document.getElementById("userPhone").value;
+
+    if (!name || !email || !phone) {
+        alert("Please fill all the details to submit your test.");
+        return;
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const testScore = urlParams.get('score') || "Unknown";
+    const severity = urlParams.get('severity') || "Unknown";
+
+    fetch('https://hook.us2.make.com/zbn99mx1v7gmnceabtnx7x2a1wwskfr5', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            "alertType": "Website Screening Alert",
+            "severityLevel": severity,
+            "testScore": testScore,
+            "userName": name,
+            "userEmail": email,
+            "userPhone": phone
+        })
+    }).then(() => {
+        alert("Thank you! Your screening score and details have been securely routed to our psychologist.");
+        document.getElementById("userName").value = "";
+        document.getElementById("userEmail").value = "";
+        document.getElementById("userPhone").value = "";
+    }).catch(err => console.log("Error:", err));
+}
